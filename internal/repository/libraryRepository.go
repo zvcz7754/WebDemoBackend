@@ -16,7 +16,7 @@ func ConnectMySQL() *sql.DB {
 	if err != nil {
 		panic(err)
 	}
-	fmt.Println("資料庫連線成功")
+	fmt.Println("資料庫連線成功!")
 
 	return db
 }()
