@@ -1,15 +1,23 @@
 package main
 
 import (
-	"webDemoBackend/internal/repository"
+	_ "github.com/tedmax100/gin-angular/docs"
 	"webDemoBackend/internal/router"
 )
 
-func main() {
-	r := router.SetupRouter()
-	// Listen and Server in 0.0.0.0:8080
-	r.Run(":8080")
+// @title go backend demo
+// @version 1.0
 
-	db777 := repository.ConnectMySQL()
-	repository.InserData(db777)
+// @contact.name Yi
+// @contact.url https://tedmax100.github.io/
+
+// @license.name Apache 2.0
+// @BasePath /api/v1
+// @host localhost:8080
+// schemes http
+func main() {
+	//repository.InitDataBase()
+
+	router.InitRouter()
+
 }
